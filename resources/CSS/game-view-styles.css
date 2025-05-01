@@ -1,0 +1,16 @@
+.background {
+    -fx-background-image: url(../images/game-background.jpg);
+    -fx-background-size: cover;
+}
+
+.hp-bar {
+    -fx-accent: red;
+}
+
+.mana-bar {
+    -fx-accent: blue;
+}
+
+#full-mana-bar {
+    -fx-accent: yellow;
+}

@@ -1,0 +1,11 @@
+.background-pane {
+    -fx-background-image: url(../images/atomic-bg-flipped.png);
+    -fx-background-size: cover;
+}
+
+.inner-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-border-color: rgba(0, 0, 0, 0.7);
+    -fx-border-width: 3px;
+    -fx-border-style: dashed;
+}

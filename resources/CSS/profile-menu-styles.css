@@ -1,0 +1,10 @@
+.background-pane {
+    -fx-background-image: url(../images/atomic-bg-flipped.png);
+    -fx-background-size: cover;
+}
+
+TextField, PasswordField {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+}

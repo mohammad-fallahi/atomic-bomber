@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="gamePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.95" prefHeight="800.0" prefWidth="1200.0" styleClass="background" stylesheets="@../CSS/game-view-styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.view.GameInterface">
+   <children>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/hp-icon.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <ProgressBar fx:id="hpBar" layoutX="51.0" layoutY="18.0" prefHeight="15.0" prefWidth="320.0" progress="1.0" styleClass="hp-bar" />
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="9.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ice-icon.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <ProgressBar fx:id="mpBar" layoutX="51.0" layoutY="55.0" prefHeight="15.0" prefWidth="200.0" progress="0.0" />
+      <Label fx:id="waveIndicator" layoutX="1111.0" text="Wave 1">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Group layoutX="1120.0" layoutY="35.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/atomic-bomb-icon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="atomicIndicator" alignment="CENTER" layoutX="5.0" layoutY="12.0" prefHeight="50.0" prefWidth="50.0" text="0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group layoutX="1115.0" layoutY="105.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cluster-bomb-icon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="clusterIndicator" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0" text="0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group layoutX="1120.0" layoutY="181.0">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/kill-count-icon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="killCountIndicator" alignment="CENTER" layoutX="5.0" layoutY="5.0" prefHeight="50.0" prefWidth="50.0" text="0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+   </children>
+</Pane>

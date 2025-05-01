@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.85" prefHeight="600.0" prefWidth="900.0" styleClass="background-pane" stylesheets="@../CSS/avatar-menu-styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.view.AvatarMenu">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="450.0" spacing="20.0">
+               <children>
+                  <Circle fx:id="userAvatar" fill="DODGERBLUE" radius="40.0" stroke="BLACK" strokeType="INSIDE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Circle>
+                  <Label fx:id="username" text="Username" textFill="WHITE">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="450.0">
+               <children>
+                  <Label onMouseClicked="#goBack" text="Back" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="499.0" prefWidth="900.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Choose an avatar from below" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="200.0" spacing="25.0">
+               <children>
+                  <Circle fx:id="avatarPicture1" fill="DODGERBLUE" onMouseClicked="#changeAvatar" radius="40.0" stroke="BLACK" strokeType="INSIDE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <Circle fx:id="avatarPicture2" fill="DODGERBLUE" layoutX="460.0" layoutY="60.0" onMouseClicked="#changeAvatar" radius="40.0" stroke="BLACK" strokeType="INSIDE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <Circle fx:id="avatarPicture3" fill="DODGERBLUE" layoutX="500.0" layoutY="60.0" onMouseClicked="#changeAvatar" radius="40.0" stroke="BLACK" strokeType="INSIDE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <Circle fx:id="avatarPicture4" fill="DODGERBLUE" layoutX="540.0" layoutY="60.0" onMouseClicked="#changeAvatar" radius="40.0" stroke="BLACK" strokeType="INSIDE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="17.0" prefWidth="900.0">
+               <children>
+                  <Label text="or choose a file from" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label onMouseClicked="#chooseFileFromPC" text=" your PC" textFill="#f7a376">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="your image dimensions must be small enough :)">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Label>
+               </children>
+            </HBox>
+            <BorderPane fx:id="dragAndDropPane" maxHeight="-Infinity" maxWidth="-Infinity" onDragDropped="#setDragDropAvatar" onDragEntered="#changeDragAndDropLabelText" onDragExited="#resetDragAndDropLabelText" onDragOver="#handleDragOver" prefHeight="250.0" prefWidth="400.0" styleClass="inner-pane">
+               <center>
+                  <Label fx:id="dropBoxLabel" text="or drag and drop here" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

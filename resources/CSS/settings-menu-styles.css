@@ -1,0 +1,4 @@
+.background-pane {
+    -fx-background-image: url(../images/atomic-bg-flipped.png);
+    -fx-background-size: cover;
+}
